@@ -13,6 +13,7 @@ public class TabPage extends BasePage {
         return currentTab.getText();
     }
 
+    //todo without waiting
     public boolean containsTitle(String title) {
         driverManager.exactText(title);
         return true;
