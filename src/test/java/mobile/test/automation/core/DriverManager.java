@@ -15,7 +15,7 @@ import static mobile.test.automation.utils.PropertyManager.get;
 
 public class DriverManager {
 
-    private final String urlAddress = "http://127.0.0.1:4723/wd/hub";
+    private final String urlAddress = get("server.url");
     private static DriverManager instance;
     private WebDriverWait waiter;
     private AndroidDriver driver;
@@ -44,7 +44,7 @@ public class DriverManager {
         capabilities.setCapability("platformVersion", get("platform.version"));
         capabilities.setCapability("appPackage", get("app.package"));
         capabilities.setCapability("appActivity", get("app.activity"));
-        capabilities.setCapability("noReset", "true");
+        capabilities.setCapability("noReset", "true"); //Otherwise internet connection problems
 
         URL serverAddress;
         try {

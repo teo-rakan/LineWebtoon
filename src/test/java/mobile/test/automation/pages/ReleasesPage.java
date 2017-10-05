@@ -15,6 +15,7 @@ public class ReleasesPage extends BasePage {
 
     @Override
     public void waitUntilLoaded() {
+        //todo locale file
         driverManager.text("New Release");
     }
 }
