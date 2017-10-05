@@ -2,8 +2,8 @@ package mobile.test.automation.tests;
 
 import mobile.test.automation.core.AppiumTest;
 import mobile.test.automation.pages.HomePage;
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

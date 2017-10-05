@@ -1,7 +1,10 @@
 package mobile.test.automation.core;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -69,12 +72,12 @@ public class DriverManager {
         return find(By.xpath("//android.widget.TextView[@text='" + text + "']"));
     }
 
-    public WebElement scrollTo(String value) {
-        return getDriver().scrollTo(value);
-    }
-
     public WebElement wait(By locator) {
         return waiter.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public WebElement wait(WebElement element) {
+        return waiter.until(ExpectedConditions.visibilityOf(element));
     }
 
     public void back() {

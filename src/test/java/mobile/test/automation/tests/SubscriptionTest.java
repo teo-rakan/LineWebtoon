@@ -3,8 +3,9 @@ package mobile.test.automation.tests;
 import mobile.test.automation.pages.ComicDetailsPage;
 import mobile.test.automation.pages.HomePage;
 import mobile.test.automation.pages.TabPage;
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 
 public class SubscriptionTest {
 

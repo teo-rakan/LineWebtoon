@@ -1,10 +1,11 @@
 package mobile.test.automation.core;
 
-import org.junit.After;
+
+import org.testng.annotations.AfterMethod;
 
 public class AppiumTest {
 
-    @After
+    @AfterMethod
     public void tearDown() {
         DriverManager.getInstance().quit();
     }
